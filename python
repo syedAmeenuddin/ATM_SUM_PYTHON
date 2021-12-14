@@ -1,17 +1,6 @@
 # cook your code here
-avalaibleamt=120
-bankcharge=0.50
-balance=''
-def test(n):
-    if(n<=avalaibleamt and n%5==0):
-        balance=avalaibleamt-n
-        print(balance-bankcharge)
-    elif(n>=avalaibleamt):
-        print(avalaibleamt)
-    else:
-        print(avalaibleamt)
-
-
-test(int(30))
-test(int(42))
-test(int(300))
+widthraw, balanceamt = map(float, input().split())
+if widthraw%5==0 and widthraw+0.5<=balanceamt:
+    print((balanceamt-widthraw)-0.5)
+else:
+    print(balanceamt)
